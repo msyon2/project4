@@ -1,0 +1,98 @@
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css");
+/* font-family: 'NanumSquareLight';
+font-family: 'NanumSquare';
+font-family: 'NanumSquareBold';
+font-family: 'NanumSquareExtraBold';
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; //16px * .625 = 10px
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'NanumSquare','나눔고딕',Dotum,'돋움',Helvetica,Arial,AppleSDGothicNeo,sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+}
+ol,
+ul,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+  cursor: pointer;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.pf {
+  position: fixed;
+}
+.flex {
+  display: flex;
+}
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.container {
+  width: 1280px;
+  margin: auto;
+  
+  @include mq('laptop_scrn') {
+		width: 90%;
+	};//900px~1200px
+	@include mq('tablet_scrn') {
+		width: 100%;
+		/* height: 54rem; */
+		/* padding: 7rem 6rem 6.5rem 6rem; */
+    padding: 3rem 6rem 1rem 6rem;
+	};//701px~899px
+	@include mq('mobile_scrn') {
+		width: 100%;
+	/* 	height: 60rem; */
+		padding: 1rem 6rem 1rem 6rem;
+	};//~700px
+    
+}
+.hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  text-indent: -222222222rem;
+}
+.splice_ico {
+  display: block;
+  background: url(../images/sp_ico.png) no-repeat;
+  background-size: 500px 3000px;
+
+
+  @include mq('tablet_scrn') {
+    background-size: 450px auto;  
+  };//701px~899px
+  @include mq('mobile_scrn') {
+    /* background-size: 450px auto; */
+    background-size: 360px auto;
+  };//~700px
+}
+

@@ -1,0 +1,60 @@
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  
+  100% {
+    transform: translateY(5rem);
+  }
+}
+@keyframes wobble {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes wobble_reverse {
+  0%,
+  100% {
+    transform: rotate(0) ;
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+ @keyframes wiggle {
+	5%,
+	50% {
+		transform: scale(1) translateX(-50%);
+	}
+	10% {
+		transform: scale(0.9) translateX(-50%);
+	}
+	15% {
+		transform: scale(1.15) translateX(-50%);
+	}
+	20% {
+		transform: scale(1.15) rotate(-5deg) translateX(-50%);
+	}
+	25% {
+		transform: scale(1.15) rotate(5deg) translateX(-50%);
+	}
+	30% {
+		transform: scale(1.15) rotate(-3deg) translateX(-50%);
+	}
+	35% {
+		transform: scale(1.15) rotate(2deg) translateX(-50%);
+	}
+	40% {
+		transform: scale(1.15) rotate(0) translateX(-50%);
+	}
+ }

@@ -1,0 +1,134 @@
+.nav {
+	&_checkbox {
+		display: none;
+	}
+	&_button {
+		background-color: $color_primary;
+		width: 7rem;
+		height: 6rem;
+		position: fixed;
+		top: 7rem;
+		right: 8rem;
+		z-index: 2000;
+		cursor: pointer;
+		border-radius: 2px;
+		box-shadow: .5rem -.5rem 2rem rgba(#fff, .4),  -.5rem .5rem 2rem rgba(#fff, .4);
+		text-align: center;
+
+		@include mq ("tablet_scrn"){
+			top: 5rem;
+			right: 5rem;
+		}
+		@include mq ("mobile_scrn"){
+			top: 4rem;
+			left: 4rem;
+		}
+	}
+	&_bg {
+		background-image: radial-gradient($color_primary, $color_secondary);
+		width: 7rem;
+		height: 6rem;
+		position: fixed;
+		top: 7rem;
+		right: 8rem;
+		z-index: 1000;
+		border-radius: 2px;
+		transition: all .8s;
+
+		@include mq ("tablet_scrn"){
+			top: 5rem;
+			right: 5rem;
+		}
+		@include mq ("mobile_scrn"){
+			top: 4rem;
+			left: 4rem;
+		}
+	}
+	&_checkbox:checked ~ &_bg {
+		transform: scale(80);
+	}
+	&_icon {
+		position: relative;
+		margin-top: 3rem;
+		&::before {
+			top: -.8rem;
+		}
+		&::after {
+			top: 0.8rem;
+		}
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			transition: all .2s;
+		}
+		&,&::before, &::after {
+			width: 3rem;
+			height: 2px;
+			background-color: $color_white;
+			display: inline-block;
+		}
+	}
+	&_button:hover &_icon::before {
+		top: -1rem;
+	}
+	&_button:hover &_icon::after {
+		top: 1rem;
+	}
+	&_checkbox:checked ~ &_button &_icon {
+		background-color: transparent;
+	}
+	&_checkbox:checked ~ &_button &_icon::before {
+		top: 0;
+		transform: rotate(135deg);
+	}
+	&_checkbox:checked ~ &_button &_icon::after {
+		top: 0;
+		transform: rotate(-135deg);
+	}
+	&_body {
+		position: fixed;
+		top: 0;
+		left: -120%;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1500;
+		opacity: 0;
+		transition: all .8s;
+	}
+	&_list {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+	}
+	&_link {
+		display: inline-block;
+		font-family:'NanumSquareBold';
+		font-size: 3rem;
+		font-weight: 300;
+		padding: 1rem 2rem;
+		color: $color_white;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all .4s;
+		background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color_white 50%);
+		background-size: 220%;
+
+		&:hover {
+			color:$color_primary;
+			background-position: 100%;
+			transform: translateX(1rem);
+		}
+		span {
+			display: inline-block;
+			margin-right:1.5rem;
+		}
+	}
+	&_checkbox:checked ~ &_body {
+		opacity: 1;
+		left: 0;
+	}
+}

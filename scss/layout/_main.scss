@@ -1,0 +1,874 @@
+main {
+  z-index: 50;
+  background-color: $color_white;
+}
+.section {
+  color: $color_gray_m;
+  background-color: $color_white;
+  width: 100%;
+  height: 100%;
+
+  /* common */
+  & h4 {
+    font-size: 26px;
+    color: $color_gray_d;
+
+    @include mq("tablet_scrn") {
+    } //701px~899px
+    @include mq("mobile_scrn") {
+      font-size: 22px;
+    } //~700px
+  }
+
+  /* intro section */
+  & .intro {
+    margin-top: 91px;
+    background: $color_white;
+
+    @include mq("tablet_scrn") {
+      margin-top: 0;
+    } //701px~899px
+    @include mq("mobile_scrn") {
+      margin-top: 50px;
+    } //~700px
+
+    h3 {
+      width: 483px;
+      height: 41px;
+      background-position: -1px -2635px;
+
+      @include mq("tablet_scrn") {
+        height: 36px;
+        background-position: -1px -2372px;
+      } //701px~899px
+      @include mq("mobile_scrn") {
+        width: 290px;
+        height: 65px;
+        background-position: -1px -601px;
+      } //~700px
+    }
+    &_txt {
+      padding-top: 23px;
+
+      h4 {
+        margin-bottom: 41px;
+        font-family: "NanumSquareExtraBold";
+
+        
+      }
+      &_body {
+        margin-bottom: 18px;
+        font-size: 22px;
+        line-height: 36px;
+
+        @include mq("mobile_scrn") {
+          font-size: 18px;
+          line-height: 1.7;
+        } //~700px
+      }
+    }
+    a {
+      margin-top: 50px;
+      display: block;
+      width: 166px;
+      height: 58px;
+      background-position: -3px -2695px;
+    }
+  }
+
+  /* history section */
+  &#history {
+    @include mq("mobile_scrn") {
+      display: none;
+    } //~700px
+  }
+  & .history {
+    padding-top: 144px;
+    background: $color_white;
+
+    @include mq("mobile_scrn") {
+      padding-top: 250px;
+    } //~700px
+
+    h3 {
+      width: 237px;
+      height: 41px;
+      background-position: -1px -2782px;
+
+      @include mq("tablet_scrn") {
+        height: 36px;
+        background-position: -1px -2504px;
+      } //701px~899px
+      @include mq("mobile_scrn") {
+        height: 36px;
+        background-position: -1px -2002px;
+      } //~700px
+    }
+    &_bg {
+      width: 1278px;
+      height: 273px;
+      background: url(../images/bg_history.png) left top / cover no-repeat;
+      margin: 51px 0 120px;
+
+      @include mq("laptop_scrn") {
+        width: 100%;
+        background-size: contain;
+      } //900px~1119px
+      @include mq("tablet_scrn") {
+        width: 100%;
+        background-size: contain;
+      } //701px~899px
+      @include mq("mobile_scrn") {
+        width: 100%;
+        background-size: contain;
+      } //~700px
+    }
+  }
+
+  /* service section */
+  & .service {
+    width: 100%;
+    h3 {
+      width: 226px;
+      height: 54px;
+      background-position: 0 -981px;
+
+      @include mq("tablet_scrn") {
+        height: 36px;
+        background-position: -1px -893px;
+      } //701px~899px
+      @include mq("mobile_scrn") {
+        height: 36px;
+        background-position: -1px -714px;
+      } //~700px
+    }
+    &_list {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 48px 0 139px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include mq("laptop_scrn") {
+        width: 95%;
+        overflow: initial;
+      } //900px~1200px
+      @include mq("tablet_scrn") {
+        overflow: initial;
+        margin: 0 0 139px;
+      } //701px~899px
+      @include mq("mobile_scrn") {
+        overflow: initial;
+        display: block;
+        width: 95%;
+      } //~700px
+
+      & li {
+        margin: 60px 0 0 0;
+        content: "";
+        display: block;
+        clear: both;
+
+        @include mq("laptop_scrn") {
+          width: 45%;
+        } //900px~1200px
+        @include mq("mobile_scrn") {
+          padding-bottom: 190px;
+        }
+
+        &:nth-of-type(2n) {
+          margin-left: 36px;
+
+          @include mq("tablet_scrn") {
+            margin-left: 0;
+          } //701px~899px
+          @include mq("mobile_scrn") {
+            margin-left: 0;
+          } //~700px
+        }
+
+        &::before {
+          content: "";
+          float: left;
+          width: 160px;
+          height: 160px;
+          background: url(../images/sp_ico.png) 0 0 no-repeat;
+          background-size: 500px 3000px;
+          margin-right: 32px;
+
+          @include mq("mobile_scrn") {
+            float: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        &.webtoon:before {
+          background-position: 0 0;
+        }
+        &.cartoon::before {
+          background-position: -170px 0;
+        }
+        &.novel::before {
+          background-position: 0 -180px;
+        }
+        &.series::before {
+          background-position: -170px -180px;
+        }
+        &.series_on::before {
+          background-position: 0 -365px;
+        }
+        &.wattpad::before {
+          background-position: -170px -365px;
+        }
+        .service_content {
+          width: 430px;
+          text-align: left;
+          margin-left: 160px;
+
+          @include mq("laptop_scrn") {
+            width: 57%;
+            text-align: left;
+            margin-left: 190px;
+          } //900px~1200px
+          @include mq("mobile_scrn") {
+            position: relative;
+            top: 190px;
+            text-align: center;
+            margin-left: 0;
+            width: auto;
+          } //~700px
+        }
+        .service_title {
+          display: block;
+          margin-bottom: 10px;
+          font-family: "NanumSquareExtraBold";
+          font-size: 21px;
+          line-height: 1.33;
+          color: #353b42;
+        }
+        .service_txt {
+          font-size: 17px;
+          line-height: 30px;
+
+          @include mq("mobile_scrn") {
+            font-size: 16px;
+          } //~700px
+        }
+        .icon {
+          margin-top: 11px;
+          margin-left: 30px;
+
+          @include mq("laptop_scrn") {
+            margin-left: 0;
+          } //900px~1200px
+          @include mq("mobile_scrn") {
+            margin-left: 0;
+          }
+
+          & a {
+            display: inline-block;
+            width: 45px;
+            height: 44px;
+            margin-left: 7px;
+
+            @include mq("tablet_scrn") {
+              width: 40px;
+              height: 40px;
+            } //701px~899px
+            @include mq("mobile_scrn") {
+              width: 32px;
+              height: 33px;
+            } //~700px
+
+            &:last-child {
+              margin-left: 5px;
+            }
+
+            &.android {
+              background-position: 0 -1697px;
+              margin-left: 0px;
+
+              @include mq("tablet_scrn") {
+                background-position: 0 -1527px;
+              } //701px~899px
+              @include mq("mobile_scrn") {
+                background-position: 0 -1221px;
+              } //~700px
+            }
+            &.ios {
+              background-position: -58px -1697px;
+
+              @include mq("tablet_scrn") {
+                background-position: -53px -1527px;
+              } //701px~899px
+              @include mq("mobile_scrn") {
+                background-position: -42px -1221px;
+              } //~700px
+            }
+            &.web {
+              background-position: -116px -1697px;
+
+              @include mq("tablet_scrn") {
+                background-position: -105px -1527px;
+              } //701px~899px
+              @include mq("mobile_scrn") {
+                background-position: -84px -1221px;
+              } //~700px
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* business section */
+  & .business {
+    width: 100%;
+    & h3 {
+      width: 266px;
+      height: 54px;
+      margin-bottom: 25px;
+      background-position: 0 -1037px;
+
+      @include mq("tablet_scrn") {
+        height: 37px;
+        background-position: 0 -942px;
+      }
+      @include mq("mobile_scrn") {
+        height: 37px;
+        background-position: 0 -754px;
+      }
+    }
+    &_txt {
+      font-family: "NanumSquareBold";
+      font-size: 17px;
+      line-height: 30px;
+      margin-bottom: 46px;
+    }
+    &_list {
+      margin-bottom: 80px;
+      justify-content: space-between;
+      & li {
+        display: block;
+        width: 45%;
+        border-top: 1px solid rgba(53, 59, 66, 0.77);
+        border-bottom: 1px solid #f2f2f2;
+        padding: 28px 0 37px;
+
+        &:last-child {
+          margin-left: 36px;
+        }
+        & h4.studion {
+          margin: 4px 0 1px;
+          width: 182px;
+          height: 39px;
+          background-position: 0 -2500px;
+
+          @include mq("tablet_scrn") {
+            width: 164px;
+            background-position: 0 -2250px;
+          }
+          @include mq("mobile_scrn") {
+            width: 132px;
+            background-position: 0 -1799px;
+          }
+        }
+        & h4.lico {
+          margin: 11px 0 6px;
+          width: 91px;
+          height: 27px;
+          background-position: -200px -2500px;
+
+          @include mq("tablet_scrn") {
+            width: 81px;
+            background-position: -180px -2250px;
+          }
+          @include mq("mobile_scrn") {
+            width: 70px;
+            background-position: -140px -1799px;
+          }
+        }
+        & .content {
+          justify-content: space-between;
+
+          @include mq("tablet_scrn") {
+            flex-wrap: wrap;
+          }
+          @include mq("mobile_scrn") {
+            flex-wrap: wrap;
+          }
+
+          & p {
+            padding-top: 17px;
+            font-size: 17px;
+          }
+          & button {
+            width: 88px;
+            height: 37px;
+            background-position: -125px -2007px;
+
+            @include mq("laptop_scrn") {
+              width: 115px;
+            } //900px~1200px
+            @include mq("tablet_scrn") {
+              width: 154px;
+              background-position: -112px -1806px;
+              margin-top: 24px;
+            }
+            @include mq("mobile_scrn") {
+              width: 64px;
+              background-position: -90px -1443px;
+              height: 29px;
+              margin-top: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    &_img_list {
+      overflow: hidden;
+      margin-bottom: 111px;
+      justify-content: space-between;
+
+      @include mq("tablet_scrn") {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+      @include mq("mobile_scrn") {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
+      & li {
+        margin-left: 10px;
+
+        @include mq("tablet_scrn") {
+          margin-bottom: 2rem;
+        }
+        @include mq("mobile_scrn") {
+          margin-bottom: 2rem;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+        & img {
+          width: 248px;
+          height: 248px;
+          border-radius: 50%;
+
+          @include mq("laptop_scrn") {
+            width: 95%;
+            height: 95%;
+          } //900px~1200px
+        }
+      }
+    }
+  }
+
+  /* careers section */
+  &#careers {
+    width: 100%;
+    height: 837px;
+    overflow: hidden;
+    background: url(../images/careers_bg.png) center center / cover no-repeat;
+
+    @include mq("tablet_scrn") {
+      height: auto;
+    } //701~899px
+    @include mq("mobile_scrn") {
+      height: auto;
+    } //~700px
+
+    & .careers {
+      width: 100%;
+      top: 0;
+      left: 50%;
+      margin-left: -640px;
+      padding-top: 182px;
+
+      @include mq("laptop_scrn") {
+        width: 95%;
+        margin-left: 0;
+        transform: translateX(-50%);
+      } //900px~1200px
+      @include mq("tablet_scrn") {
+        position: static;
+        margin-left: 0;
+        padding-top: 100px;
+      } //701px~899px
+      @include mq("mobile_scrn") {
+        position: static;
+        margin-left: 0;
+      } //~700px
+
+      & h3 {
+        width: 249px;
+        height: 54px;
+        margin-bottom: 42px;
+        background-position: 0 -1093px;
+
+        @include mq("tablet_scrn") {
+          width: 255px;
+          height: 43px;
+          background-position: 0 -991px;
+        } //701px~899px
+        @include mq("mobile_scrn") {
+          width: 178px;
+          height: 30px;
+          background-position: 0 -794px;
+        } //~700px
+      }
+      &_list {
+        margin-bottom: 24px;
+
+        @include mq("tablet_scrn") {
+          flex-wrap: wrap;
+          justify-content: center;
+        } //701~899px
+        @include mq("mobile_scrn") {
+          flex-wrap: wrap;
+          justify-content: center;
+        } //~700px
+
+        & li {
+          width: 375px;
+          height: 361px;
+
+          @include mq("laptop_scrn") {
+            width: 300px;
+          } //900px~1200px
+          @include mq("tablet_scrn") {
+            margin-bottom: 6rem;
+          } //701~899px
+          @include mq("mobile_scrn") {
+            margin-bottom: 6rem;
+          } //~700px
+
+          & .content {
+            @include mq("tablet_scrn") {
+              justify-content: center;
+            } //701~899px
+            @include mq("mobile_scrn") {
+              justify-content: center;
+            } //~700px
+          }
+
+          & span {
+            width: 42px;
+            height: 50px;
+
+            @include mq("tablet_scrn") {
+              width: 35px;
+            } //701~899px
+            @include mq("mobile_scrn") {
+              width: 28px;
+            } //~700px
+          }
+          &:nth-child(1) span {
+            background-position: -174px -1700px;
+
+            @include mq("tablet_scrn") {
+              background-position: -151px -1525px;
+            } //701~899px
+            @include mq("mobile_scrn") {
+              background-position: -127px -1218px;
+            } //~700px
+          }
+          &:nth-child(2) span {
+            background-position: -221px -1700px;
+
+            @include mq("tablet_scrn") {
+              background-position: -200px -1525px;
+            } //701~899px
+            @include mq("mobile_scrn") {
+              background-position: -160px -1218px;
+            } //~700px
+          }
+          &:nth-child(3) span {
+            background-position: -268px -1700px;
+
+            @include mq("tablet_scrn") {
+              background-position: -243px -1525px;
+            } //701~899px
+            @include mq("mobile_scrn") {
+              background-position: -194px -1218px;
+            } //~700px
+          }
+          & p {
+            margin-left: 5px;
+            font-size: 19px;
+            line-height: 1.37;
+            color: $color_gray_d;
+          }
+
+          &:nth-child(2) {
+            margin: 0 57px 0 78px;
+
+            @include mq("tablet_scrn") {
+              margin: 0;
+            } //701~899px
+            @include mq("mobile_scrn") {
+              margin: 0;
+            } //~700px
+
+            &::before {
+              @include mq("tablet_scrn") {
+                bottom: 101px;
+              } //701~899px
+              @include mq("mobile_scrn") {
+                bottom: 101px;
+              } //~700px
+            }
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 71px;
+            left: 0;
+            width: 375px;
+            height: 1px;
+            background-color: #353b42;
+            opacity: 0.77;
+            z-index: 10;
+
+            @include mq("laptop_scrn") {
+              width: 90%;
+              bottom: 105px;
+            } //900px~1200px
+          }
+          &::after {
+            content: "";
+            width: 375px;
+            height: 290px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 20;
+
+            @include mq("laptop_scrn") {
+              width: 95%;
+            } //900px~1200px
+          }
+          &:nth-child(1)::after {
+            background-image: url(../images/careers4.png);
+
+            @include mq("laptop_scrn") {
+              background-size: contain;
+            } //900px~1200px
+          }
+          &:nth-child(2)::after {
+            background-image: url(../images/careers5.png);
+
+            @include mq("laptop_scrn") {
+              background-size: contain;
+            } //900px~1200px
+            @include mq("tablet_scrn") {
+              bottom: 30px;
+            } //701~899px
+            @include mq("mobile_scrn") {
+              bottom: 30px;
+            } //~700px
+          }
+          &:nth-child(3)::after {
+            background-image: url(../images/careers6.png);
+            width: 395px;
+
+            @include mq("laptop_scrn") {
+              width: 95%;
+              background-size: contain;
+            } //900px~1200px
+          }
+        }
+      }
+
+      & button {
+        display: block;
+        width: 260px;
+        height: 90px;
+        margin: 0 auto;
+        background-position: -0 -1598px;
+
+        @include mq("tablet_scrn") {
+          width: 189px;
+          height: 62px;
+          background-position: -0 -1742px;
+          margin-bottom: 6rem;
+        } //701~899px
+        @include mq("mobile_scrn") {
+          width: 151px;
+          height: 49px;
+          background-position: -0 -1393px;
+          margin-bottom: 6rem;
+        }
+      }
+    }
+  }
+
+  /* contact section */
+  &#contact {
+    width: 100%;
+    overflow: hidden;
+    height: 773px;
+    background-color: #00d564;
+
+    @include mq("tablet_scrn") {
+      height: auto;
+      padding-top: 6rem;
+    } //701~899px
+    @include mq("mobile_scrn") {
+      height: auto;
+      padding-top: 6rem;
+    } //~700px
+
+    & .contact {
+      width: 100%;
+
+      & h3 {
+        width: 344px;
+        height: 54px;
+        top: 144px;
+        left: 0;
+        background-position: 0 -1149px;
+
+        @include mq("tablet_scrn") {
+          position: static;
+          width: 344px;
+          height: 37px;
+          background-position: 0 -1044px;
+        } //701~899px
+        @include mq("mobile_scrn") {
+          position: static;
+          width: 250px;
+          height: 30px;
+          background-position: 0 -834px;
+        } //~700px
+      }
+
+      & dd {
+        font-size: 17px;
+        line-height: 1.65;
+        color: $color_white;
+      }
+
+      & .contact1 {
+        padding-top: 266px;
+
+        @include mq("tablet_scrn") {
+          padding-top: 90px;
+        } //701~899px
+        @include mq("mobile_scrn") {
+          padding-top: 30px;
+        } //~700px
+
+        & dl {
+          margin-bottom: 55px;
+
+          dt {
+            width: 198px;
+            height: 31px;
+            background-position: 0 -1204px;
+
+            @include mq("tablet_scrn") {
+              width: 178px;
+              height: 21px;
+              background-position: 0 -1086px;
+            } //701~899px
+            @include mq("mobile_scrn") {
+              width: 143px;
+              height: 19px;
+              background-position: 0 -869px;
+              margin-bottom: 1rem;
+            } //~700px
+          }
+        }
+        a {
+          display: block;
+          height: 24px;
+          margin: 32px 0 0 15px;
+          font-size: 15px;
+          color: #fff;
+
+          @include mq("tablet_scrn") {
+            margin: 21px 0 0 15px;
+          } //701~899px
+          @include mq("mobile_scrn") {
+            margin: 31px 0 0 12px;
+            width: 90px;
+          } //~700px
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #55e599;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+          }
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 11px;
+            margin-left: 6px;
+            border: 1px solid white;
+            background-position: -500px 0;
+            background: url(../images/sp_ico.png) 0 0 / cover no-repeat;
+            background-size: 500px 3000px;
+          }
+        }
+      }
+
+      & .contact2 {
+        padding-top: 52px;
+
+        @include mq("tablet_scrn") {
+          padding-top: 0;
+          padding-bottom: 6rem;
+        } //701~899px
+        @include mq("mobile_scrn") {
+          padding-top: 0;
+          padding-bottom: 6rem;
+        } //~700px
+
+        & dl {
+          margin-bottom: 26px;
+
+          dt {
+            width: 191px;
+            height: 31px;
+            background-position: 0 -1232px;
+
+            @include mq("tablet_scrn") {
+              width: 181px;
+              height: 23px;
+              background-position: 0 -1112px;
+            } //701~899px
+            @include mq("mobile_scrn") {
+              width: 138px;
+              height: 19px;
+              background-position: 0 -889px;
+              margin-bottom: 1rem;
+            } //~700px
+          }
+        }
+      }
+    }
+    & img {
+      width: 754px;
+      height: 447px;
+      right: 0;
+      top: 0;
+    }
+  }
+}
