@@ -53,8 +53,6 @@ main {
       h4 {
         margin-bottom: 41px;
         font-family: "NanumSquareExtraBold";
-
-        
       }
       &_body {
         margin-bottom: 18px;
@@ -803,7 +801,7 @@ main {
           } //701~899px
           @include mq("mobile_scrn") {
             margin: 31px 0 0 12px;
-            width: 90px;
+            width: 98px;
           } //~700px
 
           &::before {
@@ -821,9 +819,8 @@ main {
             width: 8px;
             height: 11px;
             margin-left: 6px;
-            border: 1px solid white;
-            background-position: -500px 0;
-            background: url(../images/sp_ico.png) 0 0 / cover no-repeat;
+            background: url(../images/sp_ico.png) no-repeat;
+            background-position: -491px 0;
             background-size: 500px 3000px;
           }
         }
@@ -861,6 +858,27 @@ main {
               margin-bottom: 1rem;
             } //~700px
           }
+        }
+
+        button {
+          display: block;
+          text-indent: -22222222px;
+          width: 188px;
+          height: 66px;
+          margin-left: 4px;
+          background-position: -312px -1598px;
+          cursor: pointer;
+
+          @include mq("tablet_scrn") {
+            width: 170px;
+            height: 60px;
+            background-position: -281px -1438px;
+          } //701~899px
+          @include mq("mobile_scrn") {
+            width: 136px;
+            height: 48px;
+            background-position: -224px -1150px;
+          } //~700px
         }
       }
     }

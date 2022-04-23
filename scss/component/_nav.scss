@@ -109,18 +109,20 @@
 		font-family:'NanumSquareBold';
 		font-size: 3rem;
 		font-weight: 300;
-		padding: 1rem 2rem;
+		padding: 1.5rem 4rem;
+		/* border-radius: 4rem 0 0 4rem;
+		border-radius: 4rem; */
 		color: $color_white;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: all .4s;
-		background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color_white 50%);
-		background-size: 220%;
+		background-image: linear-gradient(120deg, transparent 0%, transparent 50%,  $color_white 50%);
+		background-size: 300%;
 
 		&:hover {
 			color:$color_primary;
-			background-position: 100%;
-			transform: translateX(1rem);
+			padding-left: 8rem;
+			background-position: 68%;
 		}
 		span {
 			display: inline-block;

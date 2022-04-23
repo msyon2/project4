@@ -282,6 +282,28 @@ button {
   }
 }
 
+#skip {
+  position: relative;
+}
+
+#skip a {
+  position: absolute;
+  left: 0;
+  top: -200px;
+  width: 300px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #eaf8f0;
+  outline: none;
+  background: #00d564;
+  line-height: 30px;
+  z-index: 20000;
+}
+
+#skip a:active, #skip a:focus {
+  top: 0;
+}
+
 .nav_checkbox {
   display: none;
 }
@@ -426,21 +448,22 @@ button {
   font-family: 'NanumSquareBold';
   font-size: 3rem;
   font-weight: 300;
-  padding: 1rem 2rem;
+  padding: 1.5rem 4rem;
+  /* border-radius: 4rem 0 0 4rem;
+		border-radius: 4rem; */
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: all .4s;
   transition: all .4s;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ffffff 50%);
-  background-size: 220%;
+  background-size: 300%;
 }
 
 .nav_link:hover {
   color: #00d564;
-  background-position: 100%;
-  -webkit-transform: translateX(1rem);
-          transform: translateX(1rem);
+  padding-left: 8rem;
+  background-position: 68%;
 }
 
 .nav_link span {
@@ -529,8 +552,8 @@ header .img div.header_webtoon_logo {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background: url(../images/spot_logo.png) 0 0/cover no-repeat;
-  -webkit-animation: wiggle 4s 2s;
-          animation: wiggle 4s 2s;
+  -webkit-animation: wiggle 4s;
+          animation: wiggle 4s;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
 }
@@ -1697,7 +1720,7 @@ main {
 @media screen and (max-width: 700px) {
   .section#contact .contact .contact1 a {
     margin: 31px 0 0 12px;
-    width: 90px;
+    width: 98px;
   }
 }
 
@@ -1717,9 +1740,8 @@ main {
   width: 8px;
   height: 11px;
   margin-left: 6px;
-  border: 1px solid white;
-  background-position: -500px 0;
-  background: url(../images/sp_ico.png) 0 0/cover no-repeat;
+  background: url(../images/sp_ico.png) no-repeat;
+  background-position: -491px 0;
   background-size: 500px 3000px;
 }
 
@@ -1765,6 +1787,32 @@ main {
     height: 19px;
     background-position: 0 -889px;
     margin-bottom: 1rem;
+  }
+}
+
+.section#contact .contact .contact2 button {
+  display: block;
+  text-indent: -22222222px;
+  width: 188px;
+  height: 66px;
+  margin-left: 4px;
+  background-position: -312px -1598px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  .section#contact .contact .contact2 button {
+    width: 170px;
+    height: 60px;
+    background-position: -281px -1438px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section#contact .contact .contact2 button {
+    width: 136px;
+    height: 48px;
+    background-position: -224px -1150px;
   }
 }
 

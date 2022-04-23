@@ -62,7 +62,7 @@ header {
       top: 145px;
       transform: translateX(-50%);
       background: url(../images/spot_logo.png) 0 0 / cover no-repeat;
-      animation: wiggle 4s 2s;
+      animation: wiggle 4s;
       transform-origin: bottom center;
 
       @include mq("tablet_scrn") {
