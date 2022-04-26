@@ -11,7 +11,7 @@ font-family: 'NanumSquareExtraBold';
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%; //16px * .625 = 10px
+  font-size: 62.5%; 
 }
 body {
   font-family: "Nanum Gothic", sans-serif;
@@ -63,13 +63,10 @@ button {
 	};//900px~1200px
 	@include mq('tablet_scrn') {
 		width: 100%;
-		/* height: 54rem; */
-		/* padding: 7rem 6rem 6.5rem 6rem; */
     padding: 3rem 6rem 1rem 6rem;
 	};//701px~899px
 	@include mq('mobile_scrn') {
 		width: 100%;
-	/* 	height: 60rem; */
 		padding: 1rem 6rem 1rem 6rem;
 	};//~700px
     
@@ -91,7 +88,6 @@ button {
     background-size: 450px auto;  
   };//701px~899px
   @include mq('mobile_scrn') {
-    /* background-size: 450px auto; */
     background-size: 360px auto;
   };//~700px
 }

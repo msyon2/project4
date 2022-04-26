@@ -7,7 +7,7 @@
 		width: 7rem;
 		height: 6rem;
 		position: fixed;
-		top: 7rem;
+		top: 4rem;
 		right: 8rem;
 		z-index: 2000;
 		cursor: pointer;
@@ -29,7 +29,7 @@
 		width: 7rem;
 		height: 6rem;
 		position: fixed;
-		top: 7rem;
+		top: 4rem;
 		right: 8rem;
 		z-index: 1000;
 		border-radius: 2px;
@@ -96,6 +96,21 @@
 		opacity: 0;
 		transition: all .8s;
 	}
+	h1 {
+		top: 50px;
+		left: 40px;
+		z-index: 200;
+
+		@include mq ("mobile_scrn"){
+		left: 50%;
+		transform: translateX(-50%);
+		}
+	
+		img {
+		  width: 116px;
+		  height: 39px;
+		}
+	  }
 	&_list {
 		position: absolute;
 		left: 50%;

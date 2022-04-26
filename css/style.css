@@ -83,8 +83,6 @@ button {
 @media screen and (min-width: 701px) and (max-width: 899px) {
   .container {
     width: 100%;
-    /* height: 54rem; */
-    /* padding: 7rem 6rem 6.5rem 6rem; */
     padding: 3rem 6rem 1rem 6rem;
   }
 }
@@ -92,7 +90,6 @@ button {
 @media screen and (max-width: 700px) {
   .container {
     width: 100%;
-    /* 	height: 60rem; */
     padding: 1rem 6rem 1rem 6rem;
   }
 }
@@ -119,7 +116,6 @@ button {
 
 @media screen and (max-width: 700px) {
   .splice_ico {
-    /* background-size: 450px auto; */
     background-size: 360px auto;
   }
 }
@@ -313,7 +309,7 @@ button {
   width: 7rem;
   height: 6rem;
   position: fixed;
-  top: 7rem;
+  top: 4rem;
   right: 8rem;
   z-index: 2000;
   cursor: pointer;
@@ -342,7 +338,7 @@ button {
   width: 7rem;
   height: 6rem;
   position: fixed;
-  top: 7rem;
+  top: 4rem;
   right: 8rem;
   z-index: 1000;
   border-radius: 2px;
@@ -433,6 +429,25 @@ button {
   transition: all .8s;
 }
 
+.nav h1 {
+  top: 50px;
+  left: 40px;
+  z-index: 200;
+}
+
+@media screen and (max-width: 700px) {
+  .nav h1 {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.nav h1 img {
+  width: 116px;
+  height: 39px;
+}
+
 .nav_list {
   position: absolute;
   left: 50%;
@@ -478,6 +493,95 @@ button {
 
 header {
   width: 100%;
+}
+
+header .lang_box {
+  position: absolute;
+  top: 36px;
+  left: 40px;
+  /* right: 200px; */
+  width: 126px;
+  height: 45px;
+  z-index: 100;
+}
+
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  header .lang_box {
+    top: 60px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header .lang_box {
+    top: 50px;
+    left: 150px;
+  }
+}
+
+header .lang_box .lang {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 126px;
+  height: 45px;
+  overflow: hidden;
+  padding: 7px 0 7px 0;
+  border: 1px solid #00d564;
+  border-radius: 23px;
+}
+
+header .lang_box .lang.open {
+  height: auto;
+}
+
+header .lang_box .lang_option a {
+  color: #353b42;
+  display: block;
+  padding: 9px 0 9px 23px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+header .lang_box .lang_option.active {
+  color: #00d564;
+}
+
+header .lang_box .lang_option.active a {
+  color: #00d564;
+}
+
+header .lang_box .lang_option.active ::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 14px;
+  width: 11px;
+  height: 11px;
+  background: url(../images/sp_ico.png) 0 0 no-repeat;
+  background-size: 500px 3000px;
+  background-position: -489px -15px;
+  vertical-align: middle;
+}
+
+header .lang_box .lang_option.selected {
+  color: #00d564;
+}
+
+header .lang_box .lang_option.selected a {
+  color: #00d564;
+}
+
+header .lang_box .lang_option.selected ::after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  right: 14px;
+  width: 11px;
+  height: 11px;
+  background: url(../../images/sp_ico.png) 0 0 no-repeat;
+  background-size: 500px 3000px;
+  background-position: -488px -392px;
+  vertical-align: middle;
 }
 
 header img {
@@ -1828,7 +1932,7 @@ footer {
 }
 
 footer .container {
-  padding: 37px 0 34px;
+  padding: 37px 0 20px;
   color: #b3b3b3;
   font-size: 14px;
   -webkit-box-pack: justify;
@@ -1838,7 +1942,7 @@ footer .container {
 
 @media screen and (min-width: 701px) and (max-width: 899px) {
   footer .container {
-    padding: 37px 6rem 34px;
+    padding: 37px 6rem 20px;
     font-size: 12px;
   }
 }
@@ -1850,7 +1954,7 @@ footer .container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 37px 6rem 34px;
+    padding: 37px 6rem 20px;
     font-size: 12px;
   }
 }
@@ -1866,5 +1970,24 @@ footer .container ul li a {
 
 footer .container ul li a.bold {
   font-family: "NanumSquareExtraBold";
+}
+
+footer .w3c_valid {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 0;
+}
+
+@media screen and (max-width: 700px) {
+  footer .w3c_valid {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+footer .w3c_valid a {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */

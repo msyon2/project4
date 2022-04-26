@@ -2,19 +2,19 @@ footer {
   width: 100%;
 
   & .container {
-    padding: 37px 0 34px;
+    padding: 37px 0 20px;
     color: $color_gray_l;
     font-size: 14px;
     justify-content: space-between;
 
     @include mq("tablet_scrn") {
-      padding: 37px 6rem 34px;
+      padding: 37px 6rem 20px;
       font-size: 12px;
     } //701~899px
     @include mq("mobile_scrn") {
       flex-wrap: wrap;
       justify-content: center;
-      padding: 37px 6rem 34px;
+      padding: 37px 6rem 20px;
       font-size: 12px;
     } //~700px
 
@@ -29,6 +29,18 @@ footer {
           font-family: "NanumSquareExtraBold";
         }
       }
+    }
+  }
+  & .w3c_valid {
+    justify-content: flex-start;
+    padding-top: 0;
+
+    @include mq("mobile_scrn") {
+      justify-content: center;
+    } //~700px
+
+    & a {
+      margin-right: 10px;
     }
   }
 }
