@@ -737,6 +737,7 @@ main {
         top: 144px;
         left: 0;
         background-position: 0 -1149px;
+        z-index: 1;
 
         @include mq("tablet_scrn") {
           position: static;
@@ -887,6 +888,7 @@ main {
       height: 447px;
       right: 0;
       top: 0;
+      z-index: 0;
     }
   }
 }
