@@ -532,18 +532,14 @@ header .lang_box .lang.open {
 }
 
 header .lang_box .lang_option a {
-  color: #353b42;
+  color: #00d564;
   display: block;
   padding: 9px 0 9px 23px;
   font-size: 14px;
   line-height: 14px;
 }
 
-header .lang_box .lang_option.on a {
-  color: #00d564;
-}
-
-header .lang_box .lang_option.on ::after {
+header .lang_box .lang_option ::after {
   position: absolute;
   content: "";
   top: 10px;
@@ -553,6 +549,35 @@ header .lang_box .lang_option.on ::after {
   background: url(../images/sp_ico.png) 0 0 no-repeat;
   background-size: 500px 3000px;
   background-position: -489px -15px;
+  vertical-align: middle;
+}
+
+header .lang_box .lang_option.active {
+  color: #00d564;
+}
+
+header .lang_box .lang_option.active a {
+  color: #00d564;
+}
+
+header .lang_box .lang_option.selected {
+  color: #00d564;
+}
+
+header .lang_box .lang_option.selected a {
+  color: #00d564;
+}
+
+header .lang_box .lang_option.selected ::after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  right: 14px;
+  width: 11px;
+  height: 11px;
+  background: url(../../images/sp_ico.png) 0 0 no-repeat;
+  background-size: 500px 3000px;
+  background-position: -488px -392px;
   vertical-align: middle;
 }
 
@@ -596,8 +621,8 @@ header .img div.header_img1 {
   width: 513px;
   height: 550px;
   margin-left: -644px;
-  -webkit-animation: float 4s 2s infinite ease-in-out, wobble 4s 2s infinite linear;
-          animation: float 4s 2s infinite ease-in-out, wobble 4s 2s infinite linear;
+  -webkit-animation: float 4s infinite ease-in-out, wobble 4s infinite linear;
+          animation: float 4s infinite ease-in-out, wobble 4s infinite linear;
 }
 
 @media screen and (min-width: 701px) and (max-width: 899px) {
@@ -648,8 +673,8 @@ header .img div.header_img2 {
   height: 375px;
   top: 95px;
   margin-left: 355px;
-  -webkit-animation: float 4s 2s infinite ease-in-out, wobble_reverse 4s 2s infinite linear;
-          animation: float 4s 2s infinite ease-in-out, wobble_reverse 4s 2s infinite linear;
+  -webkit-animation: float 4s infinite ease-in-out, wobble_reverse 4s infinite linear;
+          animation: float 4s infinite ease-in-out, wobble_reverse 4s infinite linear;
 }
 
 @media screen and (min-width: 701px) and (max-width: 899px) {
